@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>금하개발 - 지반조성포장공사업</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="금하개발 - 부산 지반조성 및 포장공사 전문업체" />
+
+  <!-- 구글 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- 부트스트랩 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    /* 상단 네비게이션 */
+    .navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* 히어로 영역 */
+    .hero-section {
+      background: linear-gradient(rgba(0, 45, 90, 0.8), rgba(0, 45, 90, 0.9)),
+                  url("https://images.pexels.com/photos/6813472/pexels-photo-6813472.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
+      color: #fff;
+      padding: 120px 0 110px;
+    }
+    .hero-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+    .hero-subtitle {
+      font-size: 1.05rem;
+      margin-top: 15px;
+      max-width: 680px;
+    }
+
+    .hero-badges span {
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 5px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.35);
+      font-size: 0.85rem;
+    }
+
+    /* 공통 섹션 */
+    section {
+      padding: 70px 0;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 36px;
+      height: 3px;
+      background-color: #0d6efd;
+      border-radius: 999px;
+    }
+
+    /* 회사 소개 카드 */
+    .about-card {
+      border-radius: 12px;
+      border: 1px solid #e5e5e5;
+      padding: 25px;
+      background-color: #fff;
+    }
+
+    /* 서비스/강점 */
+    .service-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #0d6efd33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-right: 12px;
+    }
+    .service-item {
+      margin-bottom: 18px;
+    }
+
+    /* 프로젝트/사진 자리 */
+    .project-box {
+      border-radius: 10px;
+      border: 1px dashed #cccccc;
+      padding: 20px;
+      text-align: center;
+      background: #f8f9fa;
+      font-size: 0.9rem;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .project-label {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    /* 연락처 섹션 */
+    .contact-card {
+      border-radius: 12px;
+      border: 1px solid #e5e5e5;
+      padding: 25px;
+      background-color: #fdfdfd;
+    }
+    .contact-label {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 2px;
+    }
+
+    /* 푸터 */
+    footer {
+      background-color: #0b1724;
+      color: #b8c0cc;
+      font-size: 0.85rem;
+      padding: 18px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 네비게이션 -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">금하개발</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="네비게이션 토글"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">회사소개</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">지반조성·포장</a></li>
+          <li class="nav-item"><a class="nav-link" href="#project">시공사례</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 히어로 섹션 -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="hero-badges mb-3">
+            <span>부산 · 경남 지역</span>
+            <span>지반조성 · 포장공사 전문</span>
+          </div>
+          <h1 class="hero-title">안전한 기반 위에, 편리한 길을 만듭니다.</h1>
+          <p class="hero-subtitle">
+            금하개발은 지반조성포장공사업을 기반으로 도로, 단지, 보도 및 생활 인프라의
+            바탕을 책임지는 전문 시공업체입니다. 보이지 않는 곳부터 견고하게 다져,
+            사람들이 안심하고 걸을 수 있는 길을 만드는 것, 그것이 금하개발의 역할입니다.
+          </p>
+          <div class="mt-4">
+            <a href="#contact" class="btn btn-light btn-lg me-2">공사·견적 문의</a>
+            <span class="d-inline-block mt-3 mt-sm-0 ms-sm-2" style="font-size:0.95rem;">
+              대표번호 : <a href="tel:01077508252" class="link-light text-decoration-underline">010-7750-8252</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 회사 소개 -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">회사소개</h2>
+      <div class="row g-4 mt-1">
+        <div class="col-lg-7">
+          <div class="about-card">
+            <h3 class="h5 fw-bold mb-3">지반부터 포장까지, 한 번에 책임지는 파트너</h3>
+            <p class="mb-2">
+              금하개발은 현장의 조건과 토질 특성을 정확히 파악하고, 그에 맞는 지반조성 및 포장 공법을
+              제안·시공하는 지반조성포장공사업 전문 업체입니다. 작은 보도 정비부터 단지 내 포장,
+              도로 정비까지, 현장의 규모와 난이도에 맞는 최적의 시공을 추구합니다.
+            </p>
+            <p class="mb-2">
+              특히 공공 현장 경험을 바탕으로, 안전 기준과 공사 절차를 철저히 준수하며,
+              발주처·감독관과의 원활한 소통으로 책임 있는 시공을 약속드립니다.
+            </p>
+            <p class="mb-0">
+              현장의 시작과 끝을 가장 가까이에서 지켜보며, 완공 이후에도 오랫동안
+              믿고 찾을 수 있는 파트너가 되겠습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="about-card">
+            <h3 class="h6 fw-bold mb-3">기본 정보</h3>
+            <div class="mb-2">
+              <div class="contact-label">상호</div>
+              <div>금하개발</div>
+            </div>
+            <div class="mb-2">
+              <div class="contact-label">대표자</div>
+              <div>유현식</div>
+            </div>
+            <div class="mb-2">
+              <div class="contact-label">주소</div>
+              <div>
+                부산광역시 북구 만덕1로8, 101동 15층 11<br />
+                (만덕동, 만덕베르빌아파트)
+              </div>
+            </div>
+            <div class="mb-2">
+              <div class="contact-label">연락처</div>
+              <div><a href="tel:01077508252" class="link-dark">010-7750-8252</a></div>
+            </div>
+            <div class="mb-2">
+              <div class="contact-label">이메일</div>
+              <div><a href="mailto:geumha8252@naver.com" class="link-dark">geumha8252@naver.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 지반조성·포장 소개/강점 -->
+  <section id="service" style="background-color:#f8f9fb;">
+    <div class="container">
+      <h2 class="section-title">지반조성·포장 공사 소개</h2>
+
+      <div class="row mt-4">
+        <div class="col-lg-6 mb-4">
+          <h3 class="h6 fw-bold mb-3">주요 시공 분야</h3>
+
+          <div class="service-item d-flex">
+            <div class="service-icon">①</div>
+            <div>
+              <div class="fw-semibold">도로 및 보도 포장</div>
+              <div style="font-size:0.92rem;">
+                차량 및 보행자의 안전을 고려한 구조 설계와 배수 계획을 바탕으로
+                아스팔트·콘크리트·블록 포장을 현장 여건에 맞게 시공합니다.
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item d-flex">
+            <div class="service-icon">②</div>
+            <div>
+              <div class="fw-semibold">단지 내 지반조성 및 포장</div>
+              <div style="font-size:0.92rem;">
+                공동주택, 상가, 공장부지 등 단지 내 도로와 주차장, 보행로 등
+                생활 동선 전반의 기반을 조성하고 마감 포장까지 일괄 수행합니다.
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item d-flex">
+            <div class="service-icon">③</div>
+            <div>
+              <div class="fw-semibold">기반 정지 · 토공</div>
+              <div style="font-size:0.92rem;">
+                성토·절토, 지반 다짐, 배수 정비 등 구조물과 포장이 안전하게
+                놓일 수 있도록 기반을 정돈하고, 필요한 경우 보강공을 함께 수행합니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <h3 class="h6 fw-bold mb-3">금하개발의 시공 철학</h3>
+
+          <div class="service-item d-flex">
+            <div class="service-icon">✓</div>
+            <div>
+              <div class="fw-semibold">현장 맞춤형 설계</div>
+              <div style="font-size:0.92rem;">
+                토질, 배수, 교통량, 사용 용도 등을 종합적으로 검토하여
+                과도하지 않으면서도 충분한 성능을 가진 포장 구조를 제안합니다.
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item d-flex">
+            <div class="service-icon">✓</div>
+            <div>
+              <div class="fw-semibold">안전·품질의 기본 준수</div>
+              <div style="font-size:0.92rem;">
+                시방 및 관련 기준을 철저히 준수하고, 시공 전·중·후 점검을 통해
+                균열, 침하, 배수 불량 등의 하자를 최소화합니다.
+              </div>
+            </div>
+          </div>
+
+          <div class="service-item d-flex">
+            <div class="service-icon">✓</div>
+            <div>
+              <div class="fw-semibold">책임 있는 사후관리</div>
+              <div style="font-size:0.92rem;">
+                공사 완료 후에도 사용 중 불편 사항에 귀 기울이며,
+                장기간 안정적인 사용을 목표로 꾸준히 현장을 관리합니다.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 시공사례 (사진 자리) -->
+  <section id="project">
+    <div class="container">
+      <h2 class="section-title">시공사례</h2>
+      <p class="mt-3 mb-4" style="font-size:0.95rem;">
+        아래 영역에는 실제 현장 사진을 추가하실 수 있습니다.<br />
+        나중에 공사 사진 파일을 준비하시면, 각 박스 안에 현장명을 적고 사진을 교체하시면 됩니다.
+      </p>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="project-box">
+            <div class="project-label">시공사례 1</div>
+            <div>도로 포장 정비 공사<br />예) 부산 ○○동 일원</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-box">
+            <div class="project-label">시공사례 2</div>
+            <div>단지 내 지반조성 및 주차장 포장<br />예) ○○아파트 단지 내</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="project-box">
+            <div class="project-label">시공사례 3</div>
+            <div>보도 및 인도 정비<br />예) 생활도로 보행환경 개선</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 연락처/문의 -->
+  <section id="contact" style="background-color:#f8f9fb;">
+    <div class="container">
+      <h2 class="section-title">문의하기</h2>
+
+      <div class="row mt-4">
+        <div class="col-lg-6 mb-4">
+          <div class="contact-card">
+            <h3 class="h6 fw-bold mb-3">연락처 정보</h3>
+
+            <div class="mb-3">
+              <div class="contact-label">전화</div>
+              <div><a href="tel:01077508252" class="link-dark fw-semibold">010-7750-8252</a></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="contact-label">이메일</div>
+              <div><a href="mailto:geumha8252@naver.com" class="link-dark">geumha8252@naver.com</a></div>
+            </div>
+
+            <div class="mb-3">
+              <div class="contact-label">주소</div>
+              <div>
+                부산광역시 북구 만덕1로8, 101동 15층 11<br />
+                (만덕동, 만덕베르빌아파트)
+              </div>
+            </div>
+
+            <p style="font-size:0.9rem;" class="mb-0">
+              공사 범위, 위치, 면적(㎡), 희망 공사 시기 등을 알려주시면<br />
+              보다 정확한 상담 및 견적 안내가 가능합니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="contact-card">
+            <h3 class="h6 fw-bold mb-3">간단 문의 양식 (예시)</h3>
+            <p style="font-size:0.9rem;">
+              아래 예시는 홈페이지에 들어오는 문의 내용을 정리하기 위한 예시 문구입니다.<br />
+              실제 기능은 이메일이나 전화로 문의를 주시면 됩니다.
+            </p>
+            <ul style="font-size:0.9rem; padding-left:18px; margin-bottom:0;">
+              <li>성함 / 업체명</li>
+              <li>연락처</li>
+              <li>현장 위치</li>
+              <li>공사 내용 (예: 도로 포장, 단지 내 포장, 보도 정비 등)</li>
+              <li>예상 면적 및 희망 공사 시기</li>
+            </ul>
+            <p style="font-size:0.9rem;" class="mt-3 mb-0">
+              위 내용을 정리하셔서 전화 또는 이메일로 보내주시면<br />
+              확인 후 빠르게 연락드리겠습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="mb-2 mb-md-0">
+          © 금하개발. All Rights Reserved.
+        </div>
+        <div>
+          대표자 : 유현식&nbsp;&nbsp;|&nbsp;&nbsp;
+          연락처 : <a href="tel:01077508252" class="link-light">010-7750-8252</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+          이메일 : <a href="mailto:geumha8252@naver.com" class="link-light">geumha8252@naver.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 부트스트랩 JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>
+
